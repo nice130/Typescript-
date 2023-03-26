@@ -51,3 +51,36 @@ function printTwice(msg: string): void{
     console.log(msg);
 }
 //위와같이 return이 없는 경우
+
+
+//--never : 절대 반환되지 않아야 할 함수를 처리할 때 사용 ex)예외발생
+//          또 실행을 중단하지 않는 함수 무한루프
+function makeError(msg: string){
+    throw new Error(msg);
+}
+
+// function gameLoop(): never{
+//     while(true){
+//         console.log("Game Loop Running");
+//     };
+//     // return true; 이와 같이 return이 있으면 에러
+// }
+
+
+//Objects : 자바스크립트의 객체타입과 만드는건 같다.
+function printName(person: {first: string, last: string}): void{
+    console.log(`${person.first} $${person.last}`)
+}
+
+printName({first:"Yoo", last: "YoungHoon"});
+
+//객체에 지정된 name값이 아닌 다른 값을 넣으면 에러
+// printName({f:"Yoo",last:"Hoon"}) 일시 첫번째 f는 없는 name값이기 때문에 오류가 나온다
+
+//객체타입에 바로 값 넣기
+let coordinate: { x: number; y: number } = { x: 34, y: 2 };
+
+function randomCoordinate(): {x: number, y: number} {
+    return { x: Math.random(), y: Math.random()};
+}
+
