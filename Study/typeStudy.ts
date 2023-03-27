@@ -78,26 +78,14 @@ printName({first:"Yoo", last: "YoungHoon"});
 // printName({f:"Yoo",last:"Hoon"}) 일시 첫번째 f는 없는 name값이기 때문에 오류가 나온다
 
 //객체타입에 바로 값 넣기
-let coordinate: { x: number; y: number } = { x: 34, y: 2 };
+let coordinate1: { x: number; y: number } = { x: 34, y: 2 };
 
-function randomCoordinate(): {x: number, y: number} {
+function randomCoordinate1(): {x: number, y: number} {
     return { x: Math.random(), y: Math.random()};
 }
-function doublePoint(point: {x:number; y:number}): {
+function doublePoint1(point: {x:number; y:number}): {
     x: number;
     y: number;
 }{
     return {x: point.x *2, y: point.y * 2};
 }
-
-//타입 별칭 만들기       위 예시들처럼 만들지않고
-type Point = {
-    x: number;
-    y: number;
-}
-let coordinate2 : Point = {x: 34, y: 2}; 
-function doublePoint2(point: Point): Point{
-    return {x: point.x *2, y: point.y * 2};
-}
-//이처럼 x와 y의 타입을 정해준 다음 type 이름을 불러 값을 넣을 수 있다.
-//타입스크립트 규약은 아니지만 type 이름은 앞에 대문자로 넣어준다.
