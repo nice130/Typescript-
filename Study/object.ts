@@ -76,3 +76,28 @@ const user: User = {
 }
 console.log(user.id); //id를 그냥 불러올때 오류가안나지만
 //user.id = 13541351  --id값을 변경하려고 하면 오류가남
+
+//교차 타입 (intersection type)
+type Circle = {
+    radius: number;
+};
+
+type Colorful = {
+    color: string;
+};
+
+type ColorfulCircle = Circle & Colorful; //여기서 아래처럼 오브젝트로 타입을 추가할 수도 있다.
+type ColorfulCircle2 = Circle & Colorful & {
+    count: number;
+}
+
+const happyFace: ColorfulCircle = {
+    radius: 4,
+    color : "yellow",
+}
+
+const happyFace2: ColorfulCircle2 = {
+    radius: 6,
+    color: "blue",
+    count: 5,
+}
