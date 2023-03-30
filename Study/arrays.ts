@@ -21,3 +21,4 @@ coords.push({x:23, y:8});
 
 
 //다차원 배열
+const board: string[][] = [["X","O","X"],["X","O","X"],["X","O","X"]];
