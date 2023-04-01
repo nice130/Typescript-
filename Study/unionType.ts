@@ -41,4 +41,25 @@ const stuff: (number | string)[]=[1,2,3,"asd"]
 //만들어진 두가지 타입을 가져온다면 그 타입을 맞춰줘야한다.
 const coords: (Point | Loc)[] = []; //위에 만들어놓은 타입
 coords.push({lat: 321.213, long:23.334}); 
-// coords.push({x:3}) 이렇게 2개가선ㄴ언되어있는 타입인 경우 두개를 정확하게 입력해 줘야한다.
+// coords.push({x:3})  --오류  이렇게 2개가선언되어있는 타입인 경우 두개를 정확하게 입력해 줘야한다.
+
+
+
+// 리터럴 타입  Literal Types
+let zero: 0 = 0;  //zero를 number가 아닌 0으로 선언하면
+// zero=1;  --오류      다른값을 넣으려고 했을때 0이 아니면 오류가 난다.
+
+let hi: "hi" = "hi"; //  문자열도 똑같이 hi를 넣으면 hi만 넣을수있다.
+hi="hi";
+// hi="bye"  --오류
+
+let mood: "Happy" | "Sad" = "Happy";    //mood에 Happy와 Sad를 타입을 넣으면
+mood = "Sad"         //"Happy" or "Sad" 만 넣어줄 수 있다.
+// mood  = "angry"      --오류
+
+type DayOfWeek = "Monday" | "Tuesday" | "Wednesday" | "Thursday" | "Friday" | "Satterday" | "Sunday" | 1;  //문자뿐만아니라 숫자도 같이 넣어줄 수 있음
+
+let today: DayOfWeek = "Satterday"  //DayOfWeek에 요일모두를 타입으로 넣어 필요한 요일을 넣어 사용하는 예시
+
+//이처럼 다양한 옵션을 넣어 사용할 때 유용하다. 다만 특정 타입의 값만 넣어서 쓸 수 있다.
+
