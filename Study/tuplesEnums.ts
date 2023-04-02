@@ -1,4 +1,5 @@
 // 튜플         --기본적으로 배열의 모습을하는데 길이와 타입이 고정되어 있음
+//자바스크립트에는 존재하지 않는 개념
 
 const color: [number,number,number] = [23,51,23];
 // const color2: [number,number,number] = [23,51,23,15];              
