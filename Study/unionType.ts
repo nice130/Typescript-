@@ -63,3 +63,43 @@ let today: DayOfWeek = "Satterday"  //DayOfWeek에 요일모두를 타입으로 
 
 //이처럼 다양한 옵션을 넣어 사용할 때 유용하다. 다만 특정 타입의 값만 넣어서 쓸 수 있다.
 
+
+//객체 추가하기
+//인터페이스 상속 받기
+interface Dog{
+    age:number;
+    name:string;
+}
+
+interface ServiceDog extends Dog{   //Dog를 상속받아 객체 추가
+    job: "drug sniffer" | "bomb" | "guide dog";
+}
+
+const chewy: ServiceDog = {     //Dog에 있는 속성까지 필수로 입력해줘야 오류가 안난다.
+    name: 'chewy',
+    age: 4.5,
+    job:"bomb"
+}
+
+//인터페이스 다중 상속
+interface Person{
+    name: string;
+}
+
+interface Employee{
+    readonly id: number;
+    email: string
+}
+
+interface Engineer extends Person,Employee{
+    level: string;
+    languges: string;
+}
+
+const Hoon: Engineer = {    //Engineer에 ,를 이용하여 두개를 상속하여 모두 포함하게 해준다
+    id: 130,
+    email: "nice130@naver.com",
+    name:"Yoo Young Hoon",
+    level:"junior",
+    languges:"javascript,java"
+}
