@@ -10,6 +10,17 @@ tsc 파일명.ts 를 입력하여 js파일생성한다.
 json파일에 설정을 하고 해당폴더에서
 명령어 tsc 를 입력하면 컴파일됨
 
+--json tsc컴파일 설정 방법
+TypeScript 공식문서의 TSConfig섹션에서 Docs를 클릭
+Project Configuration 에 TSConfig Reference를 참조하면
+comprilerOptions안에 "files"를 사용하라고 나와있다.
+"files":[] 안에 해당ts파일을 넣어 사용
+json안에는 무조건 더블쿼터를 사용.
+
+
+
+
+
 
 --감시모드 : 
     typescript가 변경사항이 발생하는지 항상 감시하고 
