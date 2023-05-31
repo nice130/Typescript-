@@ -1,2 +1,6 @@
 "use strict";
-console.log("배고파..ㅜ");
+function printDouble(msg) {
+    console.log(msg);
+    console.log(msg);
+}
+printDouble("안녕!");
