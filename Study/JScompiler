@@ -31,3 +31,9 @@ json안에는 무조건 더블쿼터를 사용.
 
 
 
+lite-server로 여기서는 연습
+npm init -y    를 입력하면 package.jason이 생성된다.
+package.json에서 프로젝트 name은 소문자로 바꿔준다.
+npm install lite-server  로 서버 설치해준다.
+그담 package.json에서 "scripts"에 "start" : "lite-server" 을 입력해준다
+위작업은 npm start를 했을때 lite-server을 실행시켜준다.
